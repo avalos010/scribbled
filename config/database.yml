@@ -71,7 +71,7 @@ test:
   # You can use this database configuration with:
   #
   production:
-    url: <%= ENV['DATABASE_URL'] %>
+    url: <%= URI.encode(ENV['DATABASE_URL'] )%>
 # production:
 #   <<: *default
 #   database: scribbled_production
